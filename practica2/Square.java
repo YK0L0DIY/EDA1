@@ -1,3 +1,5 @@
+//dveopers by @y.kolodiy
+//
 package practica2;
 
 public class Square extends Shape {

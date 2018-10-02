@@ -1,3 +1,5 @@
+//dveopers by @y.kolodiy
+//
 package pratica1;
 
 public class Fracao implements Comparable<Fracao> {

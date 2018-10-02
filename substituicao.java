@@ -1,3 +1,5 @@
+//dveopers by @y.kolodiy
+//
 public class substituicao {
     public static void main(String[] args) {
         System.out.println(sub("3 hello my name is"));

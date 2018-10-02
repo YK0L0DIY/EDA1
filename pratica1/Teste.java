@@ -1,3 +1,5 @@
+//dveopers by @y.kolodiy
+//
 package pratica1;
 
 import pratica1.Fracao;
