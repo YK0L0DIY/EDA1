@@ -1,17 +1,17 @@
 package pratica7;
 
-public class Folha<AnyType> {
+public class Folha<AnyType> implements Comparable<Folha> {
     AnyType element;
     Folha esq;
     Folha dir;
 
-    public void Folha(AnyType element){
+    public Folha(AnyType element){
         this.element= element;
         this.esq=null;
         this.dir=null;
     }
 
-    public void Folha(AnyType element, Folha esq, Folha dir){
+    public Folha(AnyType element, Folha esq, Folha dir){
         this.element=element;
         this.esq=esq;
         this.dir=dir;
@@ -41,4 +41,9 @@ public class Folha<AnyType> {
         this.dir = dir;
     }
 
+    @Override
+    public int compareTo(Folha o) {
+        //TODO
+        return 0;
+    }
 }
