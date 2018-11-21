@@ -13,8 +13,8 @@ public class No<AnyType extends Comparable<? super AnyType>> {
 
     public No(AnyType element){
         this.element= element;
-        this.esq=null;
-        this.dir=null;
+        this.esq=new No();
+        this.dir=new No();
     }
 
     public No(AnyType element, No esq, No dir){

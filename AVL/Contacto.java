@@ -43,6 +43,10 @@ public class Contacto implements Comparable<Contacto> {
         this.number2 = number2;
     }
 
+    public String toString(){
+        return name;
+    }
+
     @Override
     public int compareTo(Contacto o) {
         return this.name.compareTo(o.getName());
