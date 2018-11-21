@@ -2,15 +2,15 @@ package AVL;
 
 public class AVL<AnyType extends Comparable<? super AnyType>> implements AVLInterface<AnyType> {
 
-    private No<AnyType> raiz;
+    private No<AnyType> root;
 
     public AVL(){
-        raiz = new No<AnyType>();
+        root = null;
     }
 
     @Override
     public boolean isEmpty() {
-        return raiz.getElement() == null;
+        return root == null;
     }
 
     @Override
@@ -30,11 +30,11 @@ public class AVL<AnyType extends Comparable<? super AnyType>> implements AVLInte
 
     @Override
     public void insert(AnyType x) {
-        raiz = insert(raiz, x);
+        root = insert(root, x);
     }
 
     private No<AnyType> insert(No no, AnyType x) {
-        if (no.getElement() == null) {
+        if (no == null) {
             return new No<AnyType>(x);
         }
         System.out.println(no.getElement());
@@ -63,10 +63,11 @@ public class AVL<AnyType extends Comparable<? super AnyType>> implements AVLInte
     }
 
     public void printPreOrdem(){
-        printPreOrdem(raiz);
+        printPreOrdem(root);
     }
 
     private void printPreOrdem(No<AnyType> no) {
+
         if ( no.getElement() != null) {
             System.out.print(no.getElement() + " ");
             printPreOrdem(no.getEsq());
