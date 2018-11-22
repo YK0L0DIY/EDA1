@@ -15,7 +15,7 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>> {
 
 
     public void remove(AnyType x) {
-        //TODO
+        //TODO remove
         System.out.println("Sorry, remove unimplemented");
     }
 
@@ -114,8 +114,7 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>> {
             printTree(t.right);
         }
     }
-    //TODO
-    //preordem //posordem
+    //TODO preordem posordem
 
     private int height(AvlNode<AnyType> t) {
         if (t == null) {
@@ -157,7 +156,15 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>> {
         return rotateWithRightChild(k1);
     }
 
+    //TODO Iterator
+
+
     private static class AvlNode<AnyType> {
+        AnyType element;      // sera o contacto
+        AvlNode<AnyType> left;         // no esquerdo
+        AvlNode<AnyType> right;        // no direito
+        int height;       // altura
+
         // Constructors
         AvlNode(AnyType theElement) {
             this(theElement, null, null);
@@ -170,10 +177,7 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>> {
             height = 0;
         }
 
-        AnyType element;      // sera o contacto
-        AvlNode<AnyType> left;         // no esquerdo
-        AvlNode<AnyType> right;        // no direito
-        int height;       // altura
+
     }
 
     public static class Contacto implements Comparable<Contacto> {
